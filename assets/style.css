@@ -98,6 +98,10 @@ nav li {
     height: 45px;
 }
 
+.main-blog a:hover {
+    background-color: var(--Very-dark-blue);
+}
+
 .blog-description {
     display: flex;
     flex-direction: column;
@@ -179,6 +183,14 @@ aside a:hover {
     justify-content: space-between;
 }
 
+.article a:visited {
+    color: var(--Very-dark-blue);
+}
+
+.article a:hover {
+    color: var(--Soft-orange);
+}
+
 .article1 {
     grid-area: article1;
 }
@@ -189,4 +201,10 @@ aside a:hover {
 
 .article3 {
     grid-area: article3;
+}
+
+/* footer */
+
+.attribution {
+    grid-column: 1 / -1;
 }
