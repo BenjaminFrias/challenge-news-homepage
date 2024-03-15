@@ -14,17 +14,15 @@
 body {
     margin: 0;
     padding: 40px 200px;
-    font-size: 15px;
+    font-size: 14px;
     font-family: 'Inter', Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    color: var(--Very-dark-blue);
+    font-weight: 300;
 }
 
 .container {
-    background-color: rgb(195, 218, 238);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 5fr 3fr 1fr;
+    grid-template-rows: 1fr 5fr 3fr 4fr;
     grid-template-areas: 
     "header header header"
     "img img side-bar"
@@ -35,9 +33,17 @@ body {
 }
 
 img {
-    width: 50px;
     object-fit: contain;
 }
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--Soft-orange);
+}
+
 
 /* HEADER */
 
@@ -50,15 +56,11 @@ header {
 
 nav ul {
     display: flex;
-    gap: 15px;
+    gap: 25px;
 }
 
 nav li {
     list-style: none;
-}
-
-nav ul a {
-    text-decoration: none;
 }
 
 /* MAIN */
@@ -70,25 +72,112 @@ nav ul a {
 
 .main-blog {
     grid-area: main-blog;
+    margin: 5px 0 0 0;
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
 .main-blog h2 {
-    grid: 1 / 2;
+    font-size: 3rem;
+    margin: 0 30px 0 0;
+    font-weight: 900;
+    line-height: 3rem;
+    grid-column: 1 / 2;
 }
 
+.main-blog a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 3px;
+    background-color: var(--Soft-red);
+    color: var(--Off-white);
+    width: 170px;
+    height: 45px;
+}
 
 .blog-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     grid-column: 2 / 3;
 }
 
+.blog-description p {
+    margin: 0;
+}
+
+/* ASIDE */
 
 aside {
     grid-area: side-bar;
+    padding: 20px;
+    background-color: var(--Very-dark-blue);
+    color: var(--Off-white);
 }
 
+aside h2 {
+    font-size: 2rem;
+    margin-top: 0;
+    color: var(--Soft-orange);
+}
+
+aside h3 {
+    margin: 0;
+}
+
+aside p {
+    margin: 10px 0 0 0;
+}
+
+aside hr {
+    margin: 20px 0;
+}
+
+aside a:visited {
+    color: var(--Off-white);
+}
+
+aside a:hover {
+    color: var(--Soft-orange);
+}
+
+
 /* ARTICLES */
+
+.article {
+    margin-top: 35px;
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+.article img {
+    width: 30%;
+    height: auto;
+}
+
+.article h2 {
+    margin: 0;
+}
+
+.article h3, p {
+    margin: 7px 0;
+}
+
+.article h2 {
+    color: var(--Grayish-blue);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.article-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .article1 {
     grid-area: article1;
