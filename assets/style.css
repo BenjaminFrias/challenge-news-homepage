@@ -241,6 +241,10 @@ aside hr {
     margin: 20px 0;
 }
 
+aside a {
+    color: var(--Off-white);
+}
+
 aside a:visited {
     color: var(--Off-white);
 }
