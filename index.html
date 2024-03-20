@@ -21,7 +21,7 @@
     <header>
       <img src="assets/images/logo.svg" alt="Logo">
       <nav>
-        <ul>
+        <ul>   
           <li><a href="#" target="_blank" rel="noopener noreferrer">Home</a></li>
           <li><a href="#" target="_blank" rel="noopener noreferrer">New</a></li>
           <li><a href="#" target="_blank" rel="noopener noreferrer">Popular</a></li>
@@ -29,6 +29,9 @@
           <li><a href="#" target="_blank" rel="noopener noreferrer">Categories</a></li>
         </ul>
       </nav>
+      <button class="ham-menu">
+        <div class="bar"></div>
+      </button>
     </header>
     
     <img src="assets/images/image-web-3-desktop.jpg" alt="Image Web 3" width="500" class="main-img">
@@ -95,5 +98,30 @@
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Your Name Here</a>.
     </div>
+
+  <script>
+    const hamMenu = document.querySelector('.ham-menu');
+    const nav = document.querySelector('header nav');
+
+    const container = document.querySelector('.container');
+    const darkBg = document.createElement('div');
+
+    document.body.insertBefore(darkBg, container);
+
+    hamMenu.addEventListener('click', function() {
+        hamMenu.classList.toggle('is-active');
+        nav.classList.toggle('mobile-nav');
+
+        if (nav.classList.contains('mobile-nav')) {
+            darkBg.classList.add('dark-bg');
+        }
+        else {
+            darkBg.classList.remove('dark-bg');
+        }
+
+    })
+
+
+  </script>
 </body>
 </html>
